@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+	</head>
+	<body>
+		<header class="header-navbar">
+  			<div class="layout-flex top-banner">
+  				<div class="flex-grow">
+  					<a href="https://www.oschina.net/" class="osc-logo"></a>
+  					<div class="menus sm-hide">
+  						<a class="menu-item" href="https://www.oschina.net/">BLUCE Li Blog</a>
+  					</div>
+  				</div>
+  				<div class="user-bar">
+  					<div class="user-info">[ 
+  						<% if(!user){ %>
+	  						<a href="###"><input class="btn btn-success" type="button" value="登录" onclick="location.href='/users/login'"/></a> | 
+	  						<a href="###"><input class="btn btn-success" type="button" value="注册" onclick="location.href='/users'"/></a>
+  						<% }else{ %>
+	  						<span>您好，欢迎&nbsp;&nbsp;<%= user %></span><a href="###"><input class="btn btn-success" type="button" value="退出" onclick="location.href='/users/quit'"/></a>  |
+	  						<a href="###"><input class="btn btn-success" type="button" value="注册" onclick="location.href='/users'"/></a>
+  						<% } %>	
+  						 ]
+  					</div>
+  				</div>
+  			</div>
+  		</header>
+		<section class="bottom-space">
+  			<header class="box vertical sec-header osc-banner">
+				    <div class="banner-box box vertical">
+				        <div class="box vertical box-fl">
+				            <a href="###" class="sec-title" title="开源中国社区">
+				                <img src="/images/lv_bg.png" alt="开源中国社区logo" width="180px" height="51px">
+				            </a>
+				        </div>
+				        <div class="box box-aw">
+				            <nav class="osc-banner-nav">
+				                <div class="box around osc-bnav-wrapper">
+				                    <div class="box">
+				                        <a href="###" class="banner-link site" title="众包">众包</a>
+				                        <div class="box column">
+				                            <a href="###" class="banner-link" title="项目大厅">项目大厅</a>
+				                            <a href="###" class="banner-link" title="软件与服务">软件与服务</a>
+				                            <a href="###" class="banner-link" title="接活赚钱">接活赚钱</a>
+				                        </div>
+				                    </div>
+				                </div>
+				            </nav>
+				            <nav class="osc-banner-nav">
+				                <div class="box around osc-bnav-wrapper">
+				                    <div class="box">
+				                        <a href="###" class="banner-link site" title="码云">码云</a>
+				                        <div class="box column">
+				                            <a href="###" class="banner-link" title="Git&amp;SVN 代码托管">Git&amp;SVN 代码托管</a>
+				                            <a href="###" class="banner-link" title="Team 协作开发平台">Team 协作开发平台</a>
+				                            <a href="###" class="banner-link" target="_blank" title="在线工具">在线工具</a>
+				                        </div>
+				                    </div>
+				                </div>
+				            </nav>
+				            <nav class="osc-banner-nav">
+				                <div class="box around osc-bnav-wrapper">
+				                    <div class="box">
+				                        <a href="###" class="banner-link site" title="活动">活动</a>
+				                        <div class="box column">
+				                            <a href="###" class="banner-link" title="线下活动">线下活动</a>
+				                            <a href="###" class="banner-link" title="发起活动">发起活动</a>
+				                            <a href="###" class="banner-link" title="源创会">源创会</a>
+				                        </div>
+				                    </div>
+				                </div>
+				            </nav>
+				        </div>
+				        <div class="box-fr">
+				            <form class="sec-search" action="###">
+				                <input type="hidden" name="scope" value="project">
+				                                <input type="text" class="search-text" placeholder="在 43627 款开源软件中搜索" name="q">
+				                <button type="submit" class="ic-search box vertical"></button>
+				            </form>
+				        </div>
+				    </div>
+				</header>
+  		</section>
+		<h2 style="width: 1000px;margin:0 auto;"><%- tit %></h2>
+		<div style="width: 1000px;margin:0 auto;"><%- con %></div>
+		
+		
+		<div style="width: 1000px;margin:0 auto;">
+			<img src="/images/11.png" style="width: 1000px;margin:0 auto;"/>
+		</div>
+		
+	</body>
+</html>

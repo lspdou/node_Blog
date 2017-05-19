@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+    <link rel='stylesheet' href='/stylesheets/login_css.css' />
+  </head>
+  <body class="sc">
+		<header class="home-header">
+	    <a href="###"><span class="logo"></span></a>
+		</header>
+		<section class="box vertical home-wrapper">
+			<div class=" login-body">
+				<nav class="login-tabs">
+					<span class="tab-item active" data-tab-for="wechat_login">
+	                    <i class="ic-svg ic-qw-white"></i>
+	                </span>
+	                <span class="tab-bg"></span>
+				</nav>
+				<div class="text-center login-title">登录</div>
+				<div class="box">
+					<div class="box-aw login-box">
+						<article>
+							<div class="account-login tab-box">
+								<form action="/users/login" method="post">
+									<div class="login-form form-wrapper">
+										<div class="form-item">
+	                    <div class="form-ctrl">
+	                        <div>账户：
+	                        	<input type="text" id="user" class="form-control" name="user" placeholder="用户名"/>
+	                        </div>
+	                    </div>
+	                    <%- num %>
+	                </div>
+	                <div class="form-item">
+	                    <div class="form-ctrl">
+	                        <div>密码：
+	                        	<input type="password" id="user" class="form-control" name="pwd" placeholder="密码"/>
+	                        </div>
+	                    </div>
+	                </div>
+										<div class="form-item box">
+	                    <div class="box-aw rememb">
+	                        <div class="checkbox-group">
+	                            <input type="checkbox" checked="checked" id="save_login">
+	                            <label for="save_login" class="checkbox">记住密码</label>
+	                        </div>
+	                    </div>
+	                    <div class="box-fr">
+	                        <a href="###" class="btn btn-link">忘记密码?</a>
+	                    </div>
+	                </div>
+										<div class="form-item form-button">
+	                    <button type="submit"  class="btn btn-green block btn-login">登录</button>
+	                </div>
+									</div>
+								</form>
+							</div>
+						</article>
+					</div>
+					<div class="box-fr other-login-wrapper">
+						<span class="span-box">没有账号?</span>
+						<a href="/register" class="btn btn-link btn-lg btn-logon">立即注册 →</a>
+						<div class="other-login">
+							<div>使用以下账号直接登录</div>
+							<div class="login-logos">
+								<!-- JiaThis Button BEGIN -->
+								<div class="jiathis_style_32x32">
+									<div class="biao">
+										<a class="jiathis_button_qzone"></a>
+										<a class="jiathis_button_tsina"></a>
+										<a class="jiathis_button_tqq"></a>
+										<a class="jiathis_button_weixin"></a>
+									</div>
+									<div class="biao">
+										<a class="jiathis_button_renren"></a>
+										<a class="jiathis_button_cqq"></a>
+										<a class="jiathis_button_alibaba"></a>
+										<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+									</div>
+								</div>
+								<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<footer class="home-footer">
+	    <div>
+        <div>
+            <span class="copy">©<span>BLUCE Li Blog |  <a href="###" class="btn-link">关于我们</a> | <a href="###" class="btn-link">广告联系</a> | <a href="###" class="btn-link">@新浪微博</a> | <a href="###" class="btn-link">BLUCE Li Blog手机版</a><a href="###" >粤ICP备12009483号-3</a>
+        </span></span>
+        </div>
+	      <div>BLUCE Li Blog是 工信部开源软件推进联盟 指定的官方社区</div>
+	    </div>
+		</footer>
+
+
+
+
+
+
+
+
+	<!--<form action="/users/login" method="post">
+		<div>账户：<input type="text" name="user" /></div>
+		<div>密码：<input type="password" name="pwd" /></div>
+		<div><input type="submit" value="登录" /></div>
+		<%- num %>
+	</form>-->
+
+
+	</body>
+</html>

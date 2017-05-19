@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  		<header class="header-navbar">
+  			<div class="layout-flex top-banner">
+  				<div class="flex-grow">
+  					<a href="https://www.oschina.net/" class="osc-logo"></a>
+  					<div class="menus sm-hide">
+  						<a class="menu-item" href="https://www.oschina.net/">BLUCE Li Blog</a>
+  					</div>
+  				</div>
+  				<div class="user-bar">
+  					<div class="user-info">[ 
+  						<% if(!user){ %>
+	  						<a href="###"><input class="btn btn-success" type="button" value="登录" onclick="location.href='/users/login'"/></a> | 
+	  						<a href="###"><input class="btn btn-success" type="button" value="注册" onclick="location.href='/users'"/></a>
+  						<% }else{ %>
+	  						<span>您好，欢迎&nbsp;&nbsp;<%= user %></span><a href="###"><input class="btn btn-success" type="button" value="退出" onclick="location.href='/users/quit'"/></a>  |
+	  						<a href="###"><input class="btn btn-success" type="button" value="注册" onclick="location.href='/users'"/></a>
+  						<% } %>	
+  						 ]
+  					</div>
+  				</div>
+  			</div>
+  		</header>
+  		<section class="bottom-space">
+  			<header class="box vertical sec-header osc-banner">
+				    <div class="banner-box box vertical">
+				        <div class="box vertical box-fl">
+				            <a href="###" class="sec-title" title="开源中国社区">
+				                <img src="/images/lv_bg.png" alt="开源中国社区logo" width="180px" height="51px">
+				            </a>
+				        </div>
+				        <div class="box box-aw">
+				            <nav class="osc-banner-nav">
+				                <div class="box around osc-bnav-wrapper">
+				                    <div class="box">
+				                        <a href="###" class="banner-link site" title="众包">众包</a>
+				                        <div class="box column">
+				                            <a href="###" class="banner-link" title="项目大厅">项目大厅</a>
+				                            <a href="###" class="banner-link" title="软件与服务">软件与服务</a>
+				                            <a href="###" class="banner-link" title="接活赚钱">接活赚钱</a>
+				                        </div>
+				                    </div>
+				                </div>
+				            </nav>
+				            <nav class="osc-banner-nav">
+				                <div class="box around osc-bnav-wrapper">
+				                    <div class="box">
+				                        <a href="###" class="banner-link site" title="码云">码云</a>
+				                        <div class="box column">
+				                            <a href="###" class="banner-link" title="Git&amp;SVN 代码托管">Git&amp;SVN 代码托管</a>
+				                            <a href="###" class="banner-link" title="Team 协作开发平台">Team 协作开发平台</a>
+				                            <a href="###" class="banner-link" target="_blank" title="在线工具">在线工具</a>
+				                        </div>
+				                    </div>
+				                </div>
+				            </nav>
+				            <nav class="osc-banner-nav">
+				                <div class="box around osc-bnav-wrapper">
+				                    <div class="box">
+				                        <a href="###" class="banner-link site" title="活动">活动</a>
+				                        <div class="box column">
+				                            <a href="###" class="banner-link" title="线下活动">线下活动</a>
+				                            <a href="###" class="banner-link" title="发起活动">发起活动</a>
+				                            <a href="###" class="banner-link" title="源创会">源创会</a>
+				                        </div>
+				                    </div>
+				                </div>
+				            </nav>
+				        </div>
+				        <div class="box-fr">
+				            <form class="sec-search" action="###">
+				                <input type="hidden" name="scope" value="project">
+				                                <input type="text" class="search-text" placeholder="在 43627 款开源软件中搜索" name="q">
+				                <button type="submit" class="ic-search box vertical"></button>
+				            </form>
+				        </div>
+				    </div>
+				</header>
+  		</section>
+			
+			<section class="box sc-container">
+				<article class="box-aw main-container">
+					<section class="box justify news-container">
+						<div class="col-of-news">
+							<div class="box justify content-header flag">
+								<a href="###" class="information" title="综合资讯">综合资讯</a>
+							</div>
+							<div class="page">
+								<% litem.forEach(function(cen,index){  %>
+									<div class="box vertical news">
+											<a class="news-link is-today " href="showlist?id=<%= cen._id %>" title="<%= cen.con %>" target="_blank"><%= cen.tit %></a>
+											<span class="box-fr news-date"><%= "0"+(new Date().getMonth()+1)+"/"+new Date().getDate() %></span>
+	                </div>
+								<% }) %>
+							</div>
+							
+						</div>
+					</section>
+				</article>
+				<aside class="aside-container">
+					<div class="jj" style="margin:0 0 10px 0;">
+						<img src="/images/index_banner_five_BRQvS.png" width="280" height="108">
+					</div>
+					
+					<div class="message">
+							<form action="/" method="post" class="form-horizontal col-sm-10">
+								<h1 class="fcolor">留言板</h1>
+								<%- tip %>
+								<div class="form-group">
+										<label class="col-sm-2 control-label">标题：</label>
+								    <div class="col-sm-10">
+								      <input type="text" class="form-control" name="tit" />
+								    </div>
+								 </div>
+								 <div class="form-group">
+								    <label class="col-sm-2 control-label">内容：</label>
+								    <div class="col-sm-10">
+								      <textarea name="con" class="form-control" rows="6"></textarea><br />
+								      <button type="submit"  class="btn btn-success col-sm-5">发送留言</button>
+								    </div>
+								 </div>
+							</form>
+							<div style="width: 390px;">
+								<h1 class="fcolor">留言详情</h1>
+								<table class="table table-striped" style="word-break: break-all;word-wrap: break-all">
+									<tr>
+										<th class="text-center" width="20%">楼层</th>
+										<th class="text-center" width="35%">标题</th>
+										<th class="text-center">内容</th>
+									</tr>
+									<% var neng=0; var arr=["success","warning","danger","info"];bian.reverse().forEach(function(cen,index){  %>					
+										<tr class="<%= arr[index%4] %>">
+											<td class="text-center" style="color: #4990e3;vertical-align:middle;">第<%= index+1 %>层</td>
+											<td style="font-weight: bold;font-size: 18px; vertical-align:middle;"><%= cen.tit %></td>
+											<td><%= cen.con %></td>
+										</tr>
+									<% }) %>
+								</table>
+							</div>
+					</div>
+				</aside>
+			</section>  		
+  		
+  		
+  </body>
+</html>

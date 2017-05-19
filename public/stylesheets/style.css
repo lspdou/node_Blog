@@ -1,0 +1,311 @@
+a {
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    text-decoration: none;
+    color: #333;
+    border: none;
+    outline: none;
+}
+.fcolor{
+	color: #FFAAAA;
+}
+.header-navbar {
+    min-height: 40px;
+}
+.layout-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.header-navbar .top-banner {
+    background: -webkit-linear-gradient(left, rgba(78, 170, 76, 0.5), rgba(0, 202, 133, 0.5)), #4eaa4c;
+    background: linear-gradient(to right, rgba(78, 170, 76, 0.5), rgba(0, 202, 133, 0.5)), #4eaa4c;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+.layout-flex .flex-grow {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+input, button, a, textarea {
+    font-family: "Pingfang SC", "STHeiti", "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    border: none;
+    outline: 0;
+}
+.header-navbar .top-banner a {
+    color: #fff;
+}
+.header-navbar .top-banner .osc-logo {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    background: url(https://my.oschina.net/build/www/imgs/logo-osc.svg) no-repeat;
+}
+@media screen and (min-width: 769px){
+	.sm-hide {
+    display: inline-block;
+	}
+}
+.header-navbar .top-banner .menus .menu-item {
+    display: inline-block;
+    margin-right: 12px;
+}
+.btn-success{
+	border-color: #30b762;
+	background: #30b762;
+}
+.osc-banner {
+    height: 110px;
+    background-image: url(../images/header-bg.jpg);
+}
+.vertical {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-grid-row-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.sec-header {
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.sec-header .banner-box {
+    width: 100%;
+    max-width: 1200px;
+    height: 56px;
+    margin: auto;
+}
+.box-fl {
+    -webkit-transition: width .2s;
+    transition: width .2s;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+}
+.box-aw {
+    min-width: 0;
+    -webkit-transition: width .2s;
+    transition: width .2s;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: 20px;
+}
+.osc-banner .osc-banner-nav {
+    width: 33%;
+}
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+.osc-banner .osc-bnav-wrapper {
+    margin: 0 auto;
+}
+.box.around {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+.osc-banner .banner-link.site {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    margin: 0 20px 0 0;
+}
+.osc-banner .banner-link {
+    font-size: 14px;
+    color: #4A4A4A;
+    transition: color .2s;
+}
+.box.column {
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -webkit-box-direction: normal;
+}
+.osc-banner .banner-link {
+    font-size: 14px;
+    color: #4A4A4A;
+    transition: color .2s;
+}
+.box-fr {
+    -webkit-transition: width .2s;
+    transition: width .2s;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    -webkit-box-ordinal-group: 4;
+    order: 3;
+}
+.sec-header .sec-search {
+    position: relative;
+    margin: 0;
+}
+button, input {
+    overflow: visible;
+}
+button, input, select, textarea {
+    font: inherit;
+    margin: 0;
+    outline: none;
+}
+.sec-header .sec-search .search-text {
+    font-size: .875rem;
+    width: 280px;
+    height: 30px;
+    padding: 0 50px 0 14px;
+    color: #111;
+    border: none;
+    border-radius: 1.5em;
+    outline: none;
+    background: rgba(255,255,255,0.6);
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.1);
+    -webkit-transition: -webkit-box-shadow .2s;
+    transition: -webkit-box-shadow .2s;
+    transition: box-shadow .2s;
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+.sec-header .sec-search .ic-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 30px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    outline: none;
+    background: transparent url(https://www.oschina.net/build/oschina/components/imgs/icon/ic_search.svg) no-repeat center center;
+    background-size: 16px 16px;
+    -webkit-transition: background .2s;
+    transition: background .2s;
+}
+.sc-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.box.justify {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-box-pack: justify;
+}
+.news-container .col-of-news {
+    width: 800px;  
+}
+.news-container{
+	width: 800px;
+}
+.information{
+	font-weight: bold;
+	font-size: 16px;
+	position: relative;
+}
+.information:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 3px;
+    left: -16px;
+    top: 50%;
+    margin-top: -12px;
+    height: 24px;
+    background: #21B351;
+}
+.page .news {
+    height: 26px;
+    line-height: 26px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.page .news .news-link {
+    position: relative;
+    font-size: 20px;
+    color: #647891;
+    padding: 0 0 0 13px;
+    transition: color .2s;
+}
+.page .news .news-link.is-today {
+    color: #022856;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 650px;
+}
+.page .news .news-link.is-today:before {
+    background: #7ED321;
+}
+.page .news .news-link:before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    top: 50%;
+    margin-top: -2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #CFCFCF;
+}
+.page .news .news-date {
+    font-size: 20px;
+    color: #AAA;
+}
+.content-header {
+    height: 30px;
+    box-shadow: inset 0 -1px 0 0 #D8D8D8;
+    margin: 20px 0 12px 0;
+}
+.page .news .news-link.is-today:hover{
+    color: #4990e2;
+    text-decoration: none;
+}
+.aside-container {
+    margin: 20px 0 0 10px;
+    overflow: hidden;
+    flex: 0.5;
+}
+.form-control{
+	height: 20px;
+}
+textarea.form-control {
+    height: auto;
+    resize: vertical;
+}
+.form-tips{
+	color: #f00;
+	font-size: 20px;
+}
